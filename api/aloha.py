@@ -9,6 +9,6 @@ class handler(BaseHTTPRequestHandler):
         self.send_response(200)
         self.send_header('Content-type','text/plain')
         self.end_headers()
-        s = "hellow salah"
-        # self.wfile.write(s.encode('utf-8'))
+        s = "hellow aloha"
+        self.wfile.write(s.encode('utf-8'))
         return

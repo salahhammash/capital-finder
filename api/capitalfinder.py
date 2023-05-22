@@ -13,7 +13,7 @@ class handler(BaseHTTPRequestHandler):
         country = dic.get("country")
         capital =dic.get("capital")
         
-        if country :
+        if country is not None :
             url =f'https://restcountries.com/v3.1/name/{country}'
             res = requests.get(url)
             data = res.json()
@@ -23,7 +23,7 @@ class handler(BaseHTTPRequestHandler):
     
                 #  
         
-        elif capital :
+        elif capital is not None :
             url =f'https://restcountries.com/v3.1/capital/{capital}'
             res = requests.get(url)
             data = res.json()
